@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: palegreen;
+        }
+        #one{
+            border: 2px solid black;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+          
+        }
+        p{
+            
+            text-align: center;
+            padding: 13px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="one">
+        <form method="POST">
+            Enter your number 
+            <input type="text" name="lucky">
+            <input type="submit" name="submit" value="Check">
+        </form>
+        
+    </div>
+    <p> 
+            <?php
+                if(isset($_POST['submit'])){
+                    $lucky = $_POST['lucky'];
+                }
+                switch($lucky){
+                    case "12": echo '12 number made u winner';
+                                break;
+
+                    case "17":echo '17 u r damn lucky boyy';
+                    break;
+                    case "31":echo 'sorry u r not made for winning';
+                    break;
+                    case "27":echo '27 u r damn lucky boyy';
+                    break;
+                    case "13":echo '13 u r damn lucky boyy';
+                    break;
+              
+                    case "5":echo 'woww..we have a winner';
+                    break;
+                    case "14":echo ' i feel sorry for u';
+                    break;
+                    case "21":echo '21 u r damn lucky boyy';
+                    break;
+                    case "30":echo '30 u r damn lucky boyy';
+                    break;
+                    case "14":echo '14 u r damn lucky boyy';
+                    break;
+                    
+                    default:echo "i asked for date of date ...try again";
+                }
+            ?>
+        </p>
+</body>
+</html>
